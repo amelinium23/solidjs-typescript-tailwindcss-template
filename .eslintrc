@@ -1,0 +1,30 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["@typescript-eslint", "solid"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
+    "plugin:solid/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "solid/reactivity": "warn",
+    "solid/no-destructure": "warn",
+    "solid/imports": "error",
+    "solid/self-closing-comp": "error",
+    "solid/jsx-no-undef": "error",
+    "solid/no-react-specific-props": "error",
+    "import/extensions": ["error", "ignorePackages"],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+  }
+}
