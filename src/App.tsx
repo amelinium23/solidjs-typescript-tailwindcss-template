@@ -1,22 +1,22 @@
-import { Component, createSignal } from "solid-js"
+import { Component, createSignal } from "solid-js";
 
 const App: Component = () => {
-  const [signal, updateSignal] = createSignal(0)
+  const [signal, updateSignal] = createSignal(0);
 
   return (
-    <div class="flex justify-center h-100 min-h-screen min-w-fit bg-slate-300">
-      <div class="flex flex-col justify-evenly w-auto">
-        <p class="text-4xl text-black text-center py-5">Hello tailwind!</p>
-        <p class="text-3xl text-center py-5">{signal()}</p>
-        <div class="flex flex-row gap-10 justify-center">
+    <div class="h-100 flex min-h-screen min-w-fit justify-center bg-slate-300">
+      <div class="flex w-auto flex-col justify-evenly">
+        <p class="py-5 text-center text-4xl text-black">Hello tailwind!</p>
+        <p class="py-5 text-center text-3xl">{signal()}</p>
+        <div class="flex flex-row justify-center gap-10">
           <button
-            class="text-lg py-2 px-2 bg-slate-500 rounded-lg outline-blue-500 text-white"
+            class="rounded-lg bg-slate-500 py-2 px-2 text-lg text-white outline-blue-500"
             onClick={() => updateSignal(signal() - 1)}
           >
             Decrement
           </button>
           <button
-            class="text-lg py-2 px-2 bg-slate-500 outline-blue-500 rounded-lg text-white"
+            class="rounded-lg bg-slate-500 py-2 px-2 text-lg text-white outline-blue-500"
             onClick={() => updateSignal(signal() + 1)}
           >
             Increment
@@ -24,7 +24,7 @@ const App: Component = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
